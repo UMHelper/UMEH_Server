@@ -46,7 +46,7 @@ create table if not exists umeh.teach
 
 create table if not exists umeh.comment
 (
-    teach      char     null,
+    teach      int      null,
     content    longtext null,
     attendance float    null,
     pre        float    null,
@@ -65,7 +65,7 @@ create table if not exists umeh.comment
     constraint comment_id_uindex
         unique (id),
     constraint teach
-        foreign key (teach) references umeh.teach (course)
+        foreign key (teach) references umeh.teach (id)
             on update set null on delete set null
 );
 
