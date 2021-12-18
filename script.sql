@@ -33,9 +33,11 @@ create table if not exists umeh.teach
     reward     float null,
     course     char  null,
     prof       char  null,
-    id         int   not null
+    id         int auto_increment
         constraint `PRIMARY`
         primary key,
+    constraint teach_id_uindex
+        unique (id),
     constraint course
         foreign key (course) references umeh.course (New_code)
             on update set null on delete set null,
@@ -66,7 +68,6 @@ create table if not exists umeh.comment
         unique (id),
     constraint teach
         foreign key (teach) references umeh.teach (id)
-            on update set null on delete set null
 );
 
 
