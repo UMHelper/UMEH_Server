@@ -23,13 +23,13 @@ public class Comment {
     private Date pubTime;
     private Integer upvote;
     private Integer downvote;
-    private Integer teach;
+    private Long teach;
 
-    public Integer getTeach () {
+    public Long getTeach () {
         return teach;
     }
 
-    public void setTeach (Integer teach) {
+    public void setTeach (Long teach) {
         this.teach = teach;
     }
 

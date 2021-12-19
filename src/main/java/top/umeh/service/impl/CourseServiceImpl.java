@@ -1,6 +1,7 @@
 package top.umeh.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import top.umeh.mapper.CourseMapper;
 import top.umeh.proj.Course;
 import top.umeh.service.CourseService;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * @author Box
  */
+@Service
 public class CourseServiceImpl implements CourseService {
 
     @Autowired

@@ -1,6 +1,7 @@
 package top.umeh.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import top.umeh.mapper.TeachMapper;
 import top.umeh.proj.Teach;
 import top.umeh.service.TeachService;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * @author Box
  */
+@Service
 public class TeachServiceImpl implements TeachService {
 
     @Autowired

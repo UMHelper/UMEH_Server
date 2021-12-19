@@ -1,6 +1,7 @@
 package top.umeh.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import top.umeh.mapper.TimeLocationMapper;
 import top.umeh.proj.TimeLocation;
 import top.umeh.service.TimeLocationService;
@@ -10,6 +11,7 @@ import java.util.List;
 /**
  * @author Box
  */
+@Service
 public class TimeLocationServiceImpl implements TimeLocationService {
 
     @Autowired
