@@ -1,7 +1,6 @@
 package top.umeh.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import top.umeh.proj.Schedule;
 
 import java.util.List;
@@ -26,4 +25,16 @@ public interface ScheduleMapper {
 
     @Select ("select * from schedule")
     public List<Schedule> getAll();
+
+    @Insert ("insert into schedule(teach, time_location) VALUES (#{teach}, #{timeLocation})")
+    public void insert(Schedule schedule);
+
+    @Update ("update schedule set teach=#{teach}, time_location=#{timeLocation} where id=#{id}")
+    public void update(Schedule schedule);
+
+    @Delete ("delete from schedule where id=#{id}")
+    public void delete(Schedule schedule);
+
+    @Delete ("delete from schedule where id=#{id}")
+    public void delete(Long id);
 }

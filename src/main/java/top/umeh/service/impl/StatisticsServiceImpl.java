@@ -7,6 +7,9 @@ import top.umeh.service.StatisticsService;
 
 import java.util.List;
 
+/**
+ * @author Box
+ */
 public class StatisticsServiceImpl implements StatisticsService {
 
     @Autowired
@@ -14,5 +17,25 @@ public class StatisticsServiceImpl implements StatisticsService {
     @Override
     public List<Statistics> getAll () {
         return statisticsMapper.getAll ();
+    }
+
+    @Override
+    public void insert (Statistics statistics) {
+        statisticsMapper.insert (statistics);
+    }
+
+    @Override
+    public void update (Statistics statistics) {
+        statisticsMapper.update (statistics);
+    }
+
+    @Override
+    public void delete (Statistics statistics) {
+        statisticsMapper.delete (statistics);
+    }
+
+    @Override
+    public void delete (String name) {
+        statisticsMapper.delete (name);
     }
 }

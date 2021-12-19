@@ -11,4 +11,12 @@ public interface CourseService {
     public Course getByNewCode(String newCode);
 
     public List<Course> getAll();
+
+    public void insert(Course course);
+
+    public void update(Course course);
+
+    public void  delete(String  newCode);
+
+    public void  delete(Course course);
 }

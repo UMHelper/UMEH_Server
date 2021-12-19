@@ -7,6 +7,9 @@ import top.umeh.service.TeachService;
 
 import java.util.List;
 
+/**
+ * @author Box
+ */
 public class TeachServiceImpl implements TeachService {
 
     @Autowired
@@ -35,5 +38,25 @@ public class TeachServiceImpl implements TeachService {
     @Override
     public List<Teach> getAll () {
         return teachMapper.getAll ();
+    }
+
+    @Override
+    public void insert (Teach teach) {
+        teachMapper.insert (teach);
+    }
+
+    @Override
+    public void update (Teach teach) {
+        teachMapper.update (teach);
+    }
+
+    @Override
+    public void delete (Teach teach) {
+        teachMapper.delete (teach);
+    }
+
+    @Override
+    public void delete (Long id) {
+        teachMapper.delete (id);
     }
 }

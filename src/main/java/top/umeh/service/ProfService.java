@@ -13,4 +13,10 @@ public interface ProfService {
     public Prof getByName(String name);
 
     public List<Prof> getAll();
+
+    public void insert(Prof prof);
+
+    public void delete(Prof prof);
+
+    public void delete(String name);
 }

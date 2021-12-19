@@ -7,6 +7,9 @@ import top.umeh.service.TimeLocationService;
 
 import java.util.List;
 
+/**
+ * @author Box
+ */
 public class TimeLocationServiceImpl implements TimeLocationService {
 
     @Autowired
@@ -40,5 +43,25 @@ public class TimeLocationServiceImpl implements TimeLocationService {
     @Override
     public TimeLocation getByDateTimeLocation (String date, String time, String location) {
         return timeLocationMapper.getByDateTimeLocation (date, time, location);
+    }
+
+    @Override
+    public void insert (TimeLocation timeLocation) {
+        timeLocationMapper.insert (timeLocation);
+    }
+
+    @Override
+    public void update (TimeLocation timeLocation) {
+        timeLocationMapper.update (timeLocation);
+    }
+
+    @Override
+    public void delete (TimeLocation timeLocation) {
+        timeLocationMapper.delete (timeLocation);
+    }
+
+    @Override
+    public void delete (Long id) {
+        timeLocationMapper.delete (id);
     }
 }

@@ -17,4 +17,12 @@ public interface TeachService {
     public Teach getByCourseAndProf(String course, String prof);
 
     public List<Teach> getAll();
+
+    public void insert(Teach teach);
+
+    public void update(Teach teach);
+
+    public void delete(Teach teach);
+
+    public void delete(Long id);
 }

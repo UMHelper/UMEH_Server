@@ -19,4 +19,12 @@ public interface TimeLocationService {
     public List<TimeLocation> getByLocation(String location);
 
     public TimeLocation getByDateTimeLocation(String date, String time, String location);
+
+    public void insert(TimeLocation timeLocation);
+
+    public void update(TimeLocation timeLocation);
+
+    public void delete(TimeLocation timeLocation);
+
+    public void delete(Long id);
 }

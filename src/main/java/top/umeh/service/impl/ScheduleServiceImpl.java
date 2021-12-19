@@ -7,6 +7,9 @@ import top.umeh.service.ScheduleService;
 
 import java.util.List;
 
+/**
+ * @author Box
+ */
 public class ScheduleServiceImpl implements ScheduleService {
 
     @Autowired
@@ -35,5 +38,25 @@ public class ScheduleServiceImpl implements ScheduleService {
     @Override
     public List<Schedule> getAll () {
         return scheduleMapper.getAll ();
+    }
+
+    @Override
+    public void insert (Schedule schedule) {
+        scheduleMapper.insert (schedule);
+    }
+
+    @Override
+    public void update (Schedule schedule) {
+        scheduleMapper.update (schedule);
+    }
+
+    @Override
+    public void delete (Schedule schedule) {
+        scheduleMapper.delete (schedule);
+    }
+
+    @Override
+    public void delete (Long id) {
+        scheduleMapper.delete (id);
     }
 }

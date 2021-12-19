@@ -1,7 +1,6 @@
 package top.umeh.mapper;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 import top.umeh.proj.TimeLocation;
 
 
@@ -30,4 +29,16 @@ public interface TimeLocationMapper {
 
     @Select ("select * from time_location where date=#{date} and time=#{time} and location=#{location}")
     public TimeLocation getByDateTimeLocation(String date, String time, String location);
+
+    @Insert ("insert into time_location(date, time, location) VALUES (#{date}, #{time}, #{location})")
+    public void insert(TimeLocation timeLocation);
+
+    @Update ("update time_location set date=#{date}, time=#{time}, location=#{location} where id=#{id}")
+    public void update(TimeLocation timeLocation);
+
+    @Delete ("delete from time_location where id=#{id}")
+    public void delete(TimeLocation timeLocation);
+
+    @Delete ("delete from time_location where id=#{id}")
+    public void delete(Long id);
 }

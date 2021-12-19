@@ -27,4 +27,24 @@ public class CommentServiceImpl implements CommentService {
         return commentMapper.getByTeach (teach);
     }
 
+    @Override
+    public void insert (Comment comment) {
+        commentMapper.insert (comment);
+    }
+
+    @Override
+    public void update (Comment comment) {
+        commentMapper.update (comment);
+    }
+
+    @Override
+    public void delete (Comment comment) {
+        commentMapper.delete (comment);
+    }
+
+    @Override
+    public void delete (Long id) {
+        commentMapper.delete (id);
+    }
+
 }

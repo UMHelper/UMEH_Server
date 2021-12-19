@@ -1,6 +1,7 @@
 package top.umeh.service;
 
 import org.springframework.stereotype.Service;
+import top.umeh.proj.Comment;
 
 import java.util.List;
 
@@ -9,8 +10,15 @@ import java.util.List;
  */
 @Service
 public interface CommentService {
-    public top.umeh.proj.Comment getById (Long id);
+    public Comment getById (Long id);
 
-    public List<top.umeh.proj.Comment> getByTeach (Long teach);
+    public List<Comment> getByTeach (Long teach);
 
+    public void insert(Comment comment);
+
+    public void update(Comment comment);
+
+    public void delete(Comment comment);
+
+    public void delete(Long id);
 }

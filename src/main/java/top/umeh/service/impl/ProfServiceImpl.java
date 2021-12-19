@@ -8,6 +8,9 @@ import top.umeh.service.ProfService;
 
 import java.util.List;
 
+/**
+ * @author Box
+ */
 @Service
 public class ProfServiceImpl implements ProfService {
 
@@ -21,5 +24,20 @@ public class ProfServiceImpl implements ProfService {
     @Override
     public List<Prof> getAll () {
         return profMapper.getAll ();
+    }
+
+    @Override
+    public void insert (Prof prof) {
+        profMapper.insert (prof);
+    }
+
+    @Override
+    public void delete (Prof prof) {
+        profMapper.delete (prof);
+    }
+
+    @Override
+    public void delete (String name) {
+        profMapper.delete (name);
     }
 }

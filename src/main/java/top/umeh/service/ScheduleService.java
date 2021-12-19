@@ -17,4 +17,12 @@ public interface ScheduleService {
     public List<Schedule> getByTeachAndTimeLocation(Long teach, Long timeLocation);
 
     public List<Schedule> getAll();
+
+    public void insert(Schedule schedule);
+
+    public void update(Schedule schedule);
+
+    public void delete(Schedule schedule);
+
+    public void delete(Long id);
 }
