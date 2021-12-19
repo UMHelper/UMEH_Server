@@ -1,3 +1,28 @@
+create table if not exists umeh.comment
+(
+    id         int auto_increment
+        constraint `PRIMARY`
+        primary key,
+    content    longtext      null,
+    attendance float         null,
+    pre        float         null,
+    grade      float         null,
+    hard       float         null,
+    reward     float         null,
+    recommend  float         null,
+    assignment float         null,
+    result     float         null,
+    pub_time   datetime      null,
+    upvote     int default 0 null,
+    downvote   int default 0 null,
+    teach      int           not null,
+    constraint comment_id_uindex
+        unique (id)
+);
+
+create index teaach
+    on umeh.comment (teach);
+
 create table if not exists umeh.course
 (
     offering_unit         char(255)     null,
@@ -24,6 +49,23 @@ create table if not exists umeh.prof
         unique (name)
 );
 
+create table if not exists umeh.schedule
+(
+    id            int auto_increment
+        constraint `PRIMARY`
+        primary key,
+    teach         int null,
+    time_location int null,
+    constraint schedule_id_uindex
+        unique (id)
+);
+
+create index schedule_teach
+    on umeh.schedule (teach);
+
+create index schedule_time_location
+    on umeh.schedule (time_location);
+
 create table if not exists umeh.statistics
 (
     name    char(255) not null
@@ -49,36 +91,14 @@ create table if not exists umeh.teach
     hard       float     null,
     reward     float     null,
     constraint teach_id_uindex
-        unique (id),
-    constraint course
-        foreign key (course) references umeh.course (new_code),
-    constraint prof
-        foreign key (prof) references umeh.prof (name)
+        unique (id)
 );
 
-create table if not exists umeh.comment
-(
-    id         int auto_increment
-        constraint `PRIMARY`
-        primary key,
-    content    longtext      null,
-    attendance float         null,
-    pre        float         null,
-    grade      float         null,
-    hard       float         null,
-    reward     float         null,
-    recommend  float         null,
-    assignment float         null,
-    result     float         null,
-    pub_time   datetime      null,
-    upvote     int default 0 null,
-    downvote   int default 0 null,
-    teach      int           not null,
-    constraint comment_id_uindex
-        unique (id),
-    constraint teaach
-        foreign key (teach) references umeh.teach (id)
-);
+create index course
+    on umeh.teach (course);
+
+create index prof
+    on umeh.teach (prof);
 
 create table if not exists umeh.time_location
 (
@@ -90,21 +110,6 @@ create table if not exists umeh.time_location
     location char(255) null,
     constraint time_location_id_uindex
         unique (id)
-);
-
-create table if not exists umeh.schedule
-(
-    id            int auto_increment
-        constraint `PRIMARY`
-        primary key,
-    teach         int null,
-    time_location int null,
-    constraint schedule_id_uindex
-        unique (id),
-    constraint schedule_teach
-        foreign key (teach) references umeh.teach (id),
-    constraint schedule_time_location
-        foreign key (time_location) references umeh.time_location (id)
 );
 
 
