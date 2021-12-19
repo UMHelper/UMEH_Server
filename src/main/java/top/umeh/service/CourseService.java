@@ -16,7 +16,5 @@ public interface CourseService {
 
     public void update(Course course);
 
-    public void  delete(String  newCode);
-
-    public void  delete(Course course);
+    public void delete(Course course);
 }

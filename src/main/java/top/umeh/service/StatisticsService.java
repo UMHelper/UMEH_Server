@@ -16,5 +16,4 @@ public interface StatisticsService {
 
     public void delete(Statistics statistics);
 
-    public void delete(String name);
 }

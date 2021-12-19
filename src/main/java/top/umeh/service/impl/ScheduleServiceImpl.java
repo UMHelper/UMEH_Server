@@ -55,8 +55,4 @@ public class ScheduleServiceImpl implements ScheduleService {
         scheduleMapper.delete (schedule);
     }
 
-    @Override
-    public void delete (Long id) {
-        scheduleMapper.delete (id);
-    }
 }

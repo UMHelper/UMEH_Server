@@ -34,8 +34,4 @@ public class StatisticsServiceImpl implements StatisticsService {
         statisticsMapper.delete (statistics);
     }
 
-    @Override
-    public void delete (String name) {
-        statisticsMapper.delete (name);
-    }
 }

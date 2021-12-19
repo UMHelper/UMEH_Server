@@ -24,5 +24,4 @@ public interface ScheduleService {
 
     public void delete(Schedule schedule);
 
-    public void delete(Long id);
 }

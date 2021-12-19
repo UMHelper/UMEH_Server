@@ -24,5 +24,4 @@ public interface TeachService {
 
     public void delete(Teach teach);
 
-    public void delete(Long id);
 }

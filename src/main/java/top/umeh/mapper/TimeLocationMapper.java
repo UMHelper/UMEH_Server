@@ -39,6 +39,4 @@ public interface TimeLocationMapper {
     @Delete ("delete from time_location where id=#{id}")
     public void delete(TimeLocation timeLocation);
 
-    @Delete ("delete from time_location where id=#{id}")
-    public void delete(Long id);
 }

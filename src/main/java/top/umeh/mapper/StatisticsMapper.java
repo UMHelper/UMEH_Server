@@ -23,6 +23,4 @@ public interface StatisticsMapper {
     @Delete ("delete from statistics where name=#{name}")
     public void delete(Statistics statistics);
 
-    @Delete ("delete from statistics where name=#{name}")
-    public void delete(String name);
 }

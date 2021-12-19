@@ -27,8 +27,5 @@ public interface CourseMapper {
     public void update(Course course);
 
     @Delete ("delete from course where new_code=#{cewCode}")
-    public void  delete(String  newCode);
-
-    @Delete ("delete from course where new_code=#{cewCode}")
     public void  delete(Course course);
 }

@@ -42,9 +42,5 @@ public class CommentServiceImpl implements CommentService {
         commentMapper.delete (comment);
     }
 
-    @Override
-    public void delete (Long id) {
-        commentMapper.delete (id);
-    }
 
 }

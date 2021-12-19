@@ -60,8 +60,4 @@ public class TimeLocationServiceImpl implements TimeLocationService {
         timeLocationMapper.delete (timeLocation);
     }
 
-    @Override
-    public void delete (Long id) {
-        timeLocationMapper.delete (id);
-    }
 }

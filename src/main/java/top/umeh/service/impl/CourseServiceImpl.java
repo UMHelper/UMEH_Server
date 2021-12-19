@@ -35,10 +35,6 @@ public class CourseServiceImpl implements CourseService {
         courseMapper.update (course);
     }
 
-    @Override
-    public void delete (String newCode) {
-        courseMapper.delete (newCode);
-    }
 
     @Override
     public void delete (Course course) {

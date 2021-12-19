@@ -25,6 +25,4 @@ public interface ProfMapper {
     @Delete ("delete from prof where name=#{name}")
     public void delete(Prof prof);
 
-    @Delete ("delete from prof where name=#{name}")
-    public void delete(String name);
 }

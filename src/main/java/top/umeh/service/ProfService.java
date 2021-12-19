@@ -17,6 +17,5 @@ public interface ProfService {
     public void insert(Prof prof);
 
     public void delete(Prof prof);
-
-    public void delete(String name);
+    
 }

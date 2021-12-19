@@ -35,6 +35,4 @@ public interface ScheduleMapper {
     @Delete ("delete from schedule where id=#{id}")
     public void delete(Schedule schedule);
 
-    @Delete ("delete from schedule where id=#{id}")
-    public void delete(Long id);
 }

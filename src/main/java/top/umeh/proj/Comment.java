@@ -23,6 +23,15 @@ public class Comment {
     private Date pubTime;
     private Integer upvote;
     private Integer downvote;
+    private Integer teach;
+
+    public Integer getTeach () {
+        return teach;
+    }
+
+    public void setTeach (Integer teach) {
+        this.teach = teach;
+    }
 
     public Long getId () {
         return id;
@@ -104,6 +113,10 @@ public class Comment {
         this.result = result;
     }
 
+    public void setResult(){
+        setResult ((attendance+pre+grade+hard+reward+recommend+assignment)/7);
+    }
+
     public Date getPubTime () {
         return pubTime;
     }
@@ -136,8 +149,8 @@ public class Comment {
         if (!(o instanceof Comment)) {
             return false;
         }
-        Comment that = ( Comment ) o;
-        return getId ().equals (that.getId ());
+        Comment comment = ( Comment ) o;
+        return getId ().equals (comment.getId ());
     }
 
     @Override
@@ -161,6 +174,7 @@ public class Comment {
                 ", pubTime=" + pubTime +
                 ", upvote=" + upvote +
                 ", downvote=" + downvote +
+                ", teach=" + teach +
                 '}';
     }
 }

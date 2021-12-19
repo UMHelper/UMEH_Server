@@ -55,8 +55,4 @@ public class TeachServiceImpl implements TeachService {
         teachMapper.delete (teach);
     }
 
-    @Override
-    public void delete (Long id) {
-        teachMapper.delete (id);
-    }
 }

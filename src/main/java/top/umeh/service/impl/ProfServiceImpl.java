@@ -36,8 +36,4 @@ public class ProfServiceImpl implements ProfService {
         profMapper.delete (prof);
     }
 
-    @Override
-    public void delete (String name) {
-        profMapper.delete (name);
-    }
 }

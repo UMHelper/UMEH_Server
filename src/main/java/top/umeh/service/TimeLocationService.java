@@ -26,5 +26,4 @@ public interface TimeLocationService {
 
     public void delete(TimeLocation timeLocation);
 
-    public void delete(Long id);
 }

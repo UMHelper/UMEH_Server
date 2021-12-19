@@ -36,6 +36,4 @@ public interface TeachMapper {
     @Delete ("delete from teach where id=#{id}")
     public void delete(Teach teach);
 
-    @Delete ("delete from teach where id=#{id}")
-    public void delete(Long id);
 }
